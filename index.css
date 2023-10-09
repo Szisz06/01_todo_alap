@@ -1,0 +1,35 @@
+body {
+  background-color: #dbe640;
+}
+
+header,
+footer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+table {
+  background-color: rgb(232, 231, 149);
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+
+button {
+  border: "1px solid black";
+  border-radius: 5px;
+  background-color: rgb(228, 110, 110);
+  position: relative;
+  left: 44.5%;
+  padding: 10px;
+  margin: 10px;
+}
