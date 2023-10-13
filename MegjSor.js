@@ -1,5 +1,6 @@
 class MegjSor {
   #adat = {};
+
   constructor(adat, szulElem, todoView) {
     this.#adat = adat;
     this.szulElem = szulElem;
@@ -10,7 +11,7 @@ class MegjSor {
     this.torolElem = this.sorElem.find(".töröll");
 
     this.pipaElem.on("click", () => {
-      this.toggleBackgroundColor();
+      this.toggleBackgroundColorAndIcon();
     });
 
     this.torolElem.on("click", () => {
@@ -23,16 +24,18 @@ class MegjSor {
     for (const key in this.#adat) {
       txt += `<td>${this.#adat[key]}</td>`;
     }
-    txt += `<td><span class="kesz">✅</span></td> <td><span class="töröll">❌</span></td>`;
+    txt += `<td><span class="kesz">✅</span></td> <td><span class="töröll">🗑️</span></td>`;
     txt += "</tr>";
     this.szulElem.append(txt);
   }
 
-  toggleBackgroundColor() {
+  toggleBackgroundColorAndIcon() {
     if (this.sorElem.css("background-color") === "rgb(144, 238, 144)") {
       this.sorElem.css("background-color", "");
+      this.pipaElem.text("✅");
     } else {
       this.sorElem.css("background-color", "lightgreen");
+      this.pipaElem.text("❌");
     }
   }
 }
